@@ -35,6 +35,8 @@ for list1 in all_listing:
         if submit_button.get_attribute("data-control-name")=="continue_unify":
             close_button=driver.find_element(By.CLASS_NAME,"artdeco-modal__dismiss")
             close_button.click()
+            discard_button = driver.find_elements_by_class_name("artdeco-modal__confirm-dialog-btn")[1]
+            discard_button.click()
             print("Complex application,skipped")
             continue
         else:
